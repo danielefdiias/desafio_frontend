@@ -1,0 +1,43 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "nomeAnimal": "Berry",
+      "raca": "Shih Tzu",
+      "especie": "C. lupus",
+      "nomeDono": "Daniele Dias",
+      "telDono": 11911111111
+    },
+    {
+      "id": 2,
+      "nomeAnimal": "Mel",
+      "raca": "Siamês",
+      "especie": "Felis catus",
+      "nomeDono": "Evaristo",
+      "telDono": 11922222222
+    },
+    {
+      "id": 3,
+      "nomeAnimal": "Hanna",
+      "raca": "Pinscher",
+      "especie": "C. lupus",
+      "nomeDono": "Victoria",
+      "telDono": 1192333322
+    },
+    {
+      "id": 4,
+      "nomeAnimal": "Nala",
+      "raca": "American Bully",
+      "especie": "C. lupus",
+      "nomeDono": "José",
+      "telDono": 11944441111
+    },
+    {
+      "nomeAnimal": "Victor",
+      "raca": "Siamês",
+      "nomeDono": "Paulo",
+      "telDono": "111111111",
+      "id": 5
+    }
+  ]
+}
