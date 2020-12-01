@@ -45,35 +45,36 @@
                     <label for="nomeAnimal">Nome do Animal</label>
                     <input type="text" [(ngModel)]="pet.nomeAnimal" id="nomeAnimal" name="nomeAnimal" #nomeAnimal="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && nomeAnimal.invalid }" placeholder="Digite o nome do animal">
                     <div *ngIf="f.submitted && nomeAnimal.invalid" class="invalid-feedback">
-                        <div *ngIf="nomeAnimal.errors.required">Nome do animal é obrigatório</div>
+                        <div *ngIf="nomeAnimal.errors">Nome do animal é obrigatório</div>
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label for="especie">Especíe</label>
-                    <input type="text" [(ngModel)]="pet.especie" id="raca" name="especie" #especie="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && especie.invalid }" placeholder="Digite a especie">
-                    <div *ngIf="f.submitted && especie.invalid" class="invalid-feedback">
-                        <div *ngIf="especie.errors.required">Especíe do animal é obrigatório</div>
-                    </div>
+                    <label for="especie">Especie</label>
+                    <select class="form-control" id="especie" name="especie" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted }" placeholder="Digite a especie">
+                      <option>C. lupus</option>
+                      <option>Felis catus</option>                     
+                    </select>
                 </div>
+
                 <div class="form-group">
-                    <label for="raca">Raça</label>
-                    <input type="text" [(ngModel)]="pet.raca" id="raca" name="raca" #raca="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && raca.invalid }" placeholder="Digite a raca">
-                    <div *ngIf="f.submitted && raca.invalid" class="invalid-feedback">
-                        <div *ngIf="raca.errors.required">Raça do animal é obrigatório</div>
-                    </div>
+                    <label for="raca">Raça</label><br>
+                    <select class="form-control" id="raca" name="raca" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted }" placeholder="Digite a raca">                     
+                        <option value="0" *ngFor="let breed of breeds">{{breed.name}}</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="nomeDono">Nome do Dono</label>
                     <input type="text" [(ngModel)]="pet.nomeDono" id="nomeDono" name="nomeDono" #nomeDono="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && nomeDono.invalid }" placeholder="Digite o nome do Dono">
                     <div *ngIf="f.submitted && nomeDono.invalid" class="invalid-feedback">
-                        <div *ngIf="nomeDono.errors.required">Nome do Dono do animal é obrigatório</div>
+                        <div *ngIf="nomeDono.errors">Nome do Dono do animal é obrigatório</div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="telDono">Telefone do Dono</label>
                     <input type="text" [(ngModel)]="pet.telDono" id="telDono" name="telDono" #telDono="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && telDono.invalid }" placeholder="Digite o telefone do Dono">
                     <div *ngIf="f.submitted && telDono.invalid" class="invalid-feedback">
-                        <div *ngIf="telDono.errors.required">Telefone do Dono do animal é obrigatório</div>
+                        <div *ngIf="telDono.errors">Telefone do Dono do animal é obrigatório</div>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary btn-add-pet">Salvar</button>
